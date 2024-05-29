@@ -13,3 +13,7 @@ class NaiveBayesModel:
         model = joblib.load('models/naive_bayes.pkl')
         return model.predict(X)
 
+    def predict_proba(self, X):
+        model = joblib.load('models/naive_bayes.pkl')
+        return model.predict_proba(X)
+
