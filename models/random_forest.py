@@ -13,3 +13,6 @@ class RandomForestModel:
         model = joblib.load('models/random_forest.pkl')
         return model.predict(X)
 
+    def predict_proba(self, X):
+        model = joblib.load('models/random_forest.pkl')
+        return model.predict_proba(X)
