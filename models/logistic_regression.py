@@ -12,3 +12,7 @@ class LogisticRegressionModel:
     def predict(self, X):
         model = joblib.load('models/logistic_regression.pkl')  # Load saved model
         return model.predict(X)
+
+    def predict_proba(self, X):
+        model = joblib.load('models/logistic_regression.pkl')
+        return model.predict_proba(X)
